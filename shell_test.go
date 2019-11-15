@@ -24,6 +24,7 @@ func ExampleEscape_basic() {
 	out(`echo`, `hello`, `world`)
 	out(`echo`, "hello\\\\'", "'\\\\'world")
 	out(`echo`, "hello", "world\\")
+	out(`abc`, ``, `def`)
 
 	// Output:
 	// echo 'hello!' 'how are you doing $USER' '"double"' \'single\'
@@ -39,4 +40,5 @@ func ExampleEscape_basic() {
 	// echo hello world
 	// echo 'hello\\'\' \''\\'\''world'
 	// echo hello 'world\'
+	// abc '' def
 }
